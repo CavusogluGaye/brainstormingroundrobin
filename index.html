@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brainstorming App (Gürok Tema)</title>
+
+    <!-- (Opsiyonel) Google Fonts: "Inter" -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 1) Tailwind Config: ÖNCE ekleyin -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#510093',    /* Deep Purple */
+                light:   '#6f23a7',    /* Biraz daha açık bir purple */
+                dark:    '#3c006e',    /* Biraz daha koyu bir purple */
+              },
+              orange: {
+                DEFAULT: '#ff7e5f',    /* Soft Orange */
+                light:   '#ff9b7e',    /* Üst tona yakın */
+                dark:    '#e6583d',    /* Biraz daha koyu turuncu */
+              },
+              pink: {
+                DEFAULT: '#dd2a7b',    /* Soft Pink */
+                light:   '#e9649c',
+                dark:    '#b01f62',
+              },
+              cyan: {
+                DEFAULT: '#00c6ff',    /* Cyan Blue */
+                light:   '#66dfff',
+                dark:    '#009ecf',
+              },
+              lime: {
+                DEFAULT: '#00c853',    /* Lime Green */
+                light:   '#33d46a',
+                dark:    '#00963c',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+              display: ['Inter', 'ui-sans-serif', 'system-ui'],
+            },
+            boxShadow: {
+              card: '0 4px 12px rgba(0,0,0,0.05)',
+              btn:  '0 2px 8px rgba(0,0,0,0.1)',
+            },
+          }
+        }
+      };
+    </script>
+
+    <!-- 2) TailwindCDN: Config bloğundan sonra ekleyin -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
